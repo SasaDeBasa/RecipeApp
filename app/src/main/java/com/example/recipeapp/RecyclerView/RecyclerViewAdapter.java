@@ -1,5 +1,6 @@
 package com.example.recipeapp.RecyclerView;
 
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -80,4 +81,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
+
+public class RecyclerViewAdapter {
+
 }
