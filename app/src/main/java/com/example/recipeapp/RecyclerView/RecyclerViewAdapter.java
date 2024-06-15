@@ -20,9 +20,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
-    private Context mContext ;
-    private List<Recipe> mData ;
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+    private Context mContext;
+    private List<Recipe> mData;
 
     public RecyclerViewAdapter(Context mContext, List<Recipe> mData) {
         this.mContext = mContext;
@@ -31,19 +31,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view ;
+        View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_recipe,parent,false);
+        view = mInflater.inflate(R.layout.cardview_item_recipe, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.tv_recipe_title.setText(mData.get(position).getTitle());
-        holder.tv_ready_in_mins.setText( Integer.toString(mData.get(position).getReadyInMins()) );
+        holder.tv_ready_in_mins.setText(Integer.toString(mData.get(position).getReadyInMins()));
         if (mData.get(position).getImage().isEmpty()) {
 //            holder.img_recipe_thumbnail.setImageResource(R.drawable.nopicture);
-        } else{
+        } else {
             Picasso.get().load(mData.get(position).getImage()).into(holder.img_recipe_thumbnail);
         }
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -51,9 +51,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
 
                 Intent intent = new Intent(mContext, RecipeActivity.class);
-                intent.putExtra("id",mData.get(position).getId());
-                intent.putExtra("title",mData.get(position).getTitle());
-                intent.putExtra("img",mData.get(position).getImage());
+                intent.putExtra("id", mData.get(position).getId());
+                intent.putExtra("title", mData.get(position).getTitle());
+                intent.putExtra("img", mData.get(position).getImage());
                 mContext.startActivity(intent);
             }
         });
@@ -66,9 +66,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_recipe_title,tv_ready_in_mins;
+        TextView tv_recipe_title, tv_ready_in_mins;
         ImageView img_recipe_thumbnail;
-        CardView cardView ;
+        CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -81,7 +81,4 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 //            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
-
-public class RecyclerViewAdapter {
-
 }
