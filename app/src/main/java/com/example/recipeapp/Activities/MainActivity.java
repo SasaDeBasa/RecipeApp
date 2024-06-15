@@ -10,8 +10,8 @@ import android.view.MenuItem;
 
 import com.example.recipeapp.Fragment.FavoritesFragment;
 import com.example.recipeapp.Fragment.HomeFragment;
-import com.example.recipeapp.R;
 import com.example.recipeapp.Fragment.SearchFragment;
+import com.example.recipeapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
