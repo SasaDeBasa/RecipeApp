@@ -26,7 +26,7 @@ public class Recipe {
         return Title;
     }
 
-    public String getImage(){
+    public String getImage() {
         return Image;
     }
 
@@ -43,7 +43,5 @@ public class Recipe {
     public String toString() {
         return getTitle();
     }
-
-public class Recipe {
 
 }
