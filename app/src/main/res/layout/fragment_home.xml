@@ -49,21 +49,83 @@
                 android:layout_toStartOf="@+id/profilePic"
                 android:gravity="center"
                 android:text="Discover"
+                android:fontFamily="@font/"
                 android:textColor="@color/white"
                 android:textSize="48sp" />
 
         </RelativeLayout>
 
     </LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="414dp"
+        android:layout_height="65dp"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a1">
 
+        <LinearLayout
+            android:id="@+id/linearLayoutscroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="3dp">
+
+            <Button
+                android:id="@+id/fingerfood"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="fingerfood" />
+
+            <Button
+                android:id="@+id/desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="desserts" />
+
+            <Button
+                android:id="@+id/appetizer"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="appetizer" />
+
+            <Button
+                android:id="@+id/beverage"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="beverage" />
+
+            <Button
+                android:id="@+id/soup"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="soup" />
+
+            <Button
+                android:id="@+id/salad"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:text="salad" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="416dp"
-        android:layout_height="609dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="585dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="10dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/a1" />
 
