@@ -1,6 +1,7 @@
 package com.example.recipeapp.Fragment;
 
 
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ProgressBar;
 import android.widget.SearchView;
@@ -45,7 +47,7 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     private HorizontalScrollView scrollView;
     private JSONArray testArr;
     private Button fingerfood, salad, soup, beverage, desserts, appetizer;
-    public String api_key = "your_api_key";
+    public String api_key = "11288130bd24478fbca94f418c0082e3";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -93,10 +95,17 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         appetizer.setOnClickListener(this);
 
         myrv = RootView.findViewById(R.id.search_recyclerview2);
-        myrv.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        myrv.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         getActivity().getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         // Inflate the layout for this fragment
+
+
+//        if (getArguments() != null) {
+//            String foodName = getArguments().getString("food_name");
+//            searchRecipe(foodName);
+//        }
+
         return RootView;
     }
 

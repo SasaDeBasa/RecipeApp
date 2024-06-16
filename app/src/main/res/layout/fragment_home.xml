@@ -12,6 +12,7 @@
         android:layout_width="411dp"
         android:layout_height="75dp"
         android:orientation="horizontal"
+        android:layout_marginTop="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -42,7 +43,7 @@
                 android:layout_alignTop="@+id/profilePic"
                 android:layout_alignBottom="@+id/profilePic"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="3dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="-9dp"
                 android:padding="10dp"
                 android:layout_marginEnd="100dp"
@@ -62,7 +63,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="150sp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,7 +92,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/fingerfood"
+                        android:id="@+id/hfingerfood"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -126,7 +127,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/desserts"
+                        android:id="@+id/hdesserts"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -160,7 +161,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/appertizer"
+                        android:id="@+id/happertizer"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -194,7 +195,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/beverage"
+                        android:id="@+id/hbeverage"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -228,7 +229,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/soup"
+                        android:id="@+id/hsoup"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -262,7 +263,7 @@
                     android:layout_height="match_parent">
 
                     <ImageButton
-                        android:id="@+id/salad"
+                        android:id="@+id/hsalad"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/black"
@@ -289,15 +290,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="409dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20sp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="20sp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollView2" />
+        app:layout_constraintTop_toBottomOf="@id/hometext" />
 
     <TextView
         android:id="@+id/empty_view2"
@@ -317,19 +318,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/a1" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizontalRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="198dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+    <TextView
+        android:id="@+id/hometext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="@string/more_of_what_you_like"
+        android:textColor="@color/white"
+        android:fontFamily="@font/uber_bold"
+        android:textSize="18sp"
+        android:layout_marginStart="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/a1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

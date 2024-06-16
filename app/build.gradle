@@ -50,7 +50,11 @@ dependencies {
     implementation libs.gson
     implementation libs.picasso
     implementation libs.recyclerview.swipedecorator
+    implementation libs.navigation.runtime
+    implementation libs.navigation.ui
+    implementation libs.navigation.fragment
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    implementation (libs.lottie)
 }

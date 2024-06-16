@@ -20,6 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     private TextView sign_up;
@@ -31,11 +33,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         mAuth = FirebaseAuth.getInstance();
-//        sign_up= findViewById(R.id.SignUpTv);
-//        login= findViewById(R.id.loginBtn);
+     sign_up= findViewById(R.id.SignUpTv);
+      login= findViewById(R.id.loginBtn);
         email= findViewById(R.id.loginEmailEt);
         pass= findViewById(R.id.loginPasswordEt);
         sign_up.setOnClickListener(this);
@@ -66,6 +68,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             }
         }
     }
+
 
 
     private void loginUser(String email, String password) {

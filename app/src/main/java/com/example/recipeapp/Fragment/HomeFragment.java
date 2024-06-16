@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -46,6 +47,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 public class HomeFragment extends Fragment {
 
@@ -70,7 +73,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         final View RootView = inflater.inflate(R.layout.fragment_home, container, false);
         profile = RootView.findViewById(R.id.profilePic);
         profile.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +87,7 @@ public class HomeFragment extends Fragment {
         progressBar.setVisibility(View.VISIBLE);
         emptyView= RootView.findViewById(R.id.empty_view2);
         customApp = RootView.findViewById(R.id.appNameCustom);
-        Typeface customFont = Typeface.createFromAsset(getActivity().getAssets(), "Fonts/mrs-sheppards.regular.ttf");
+        Typeface customFont = Typeface.createFromAsset(getActivity().getAssets(), "Fonts/uber_medium.otf");
         customApp.setTypeface(customFont);
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -94,14 +97,38 @@ public class HomeFragment extends Fragment {
         myrv = RootView.findViewById(R.id.recyclerview);
         myrv.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         getRandomRecipes();
-        horizontalRecyclerView = RootView.findViewById(R.id.horizontalRecyclerView);
-        horizontalRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false));
-        getRandomRecipes();
-
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+//        ImageButton button1 = view.findViewById(R.id.hfingerfood);
+//        ImageButton button2 = view.findViewById(R.id.hbeverage);
+//        ImageButton button3 = view.findViewById(R.id.happertizer);
+//        ImageButton button4 = view.findViewById(R.id.hdesserts);
+//        ImageButton button5 = view.findViewById(R.id.hsalad);
+//        ImageButton button6 = view.findViewById(R.id.hsoup);
+//
+//        button1.setOnClickListener(createOnClickListener("fingerfood"));
+//        button2.setOnClickListener(createOnClickListener("beverage"));
+//        button3.setOnClickListener(createOnClickListener("appertizer"));
+//        button4.setOnClickListener(createOnClickListener("dessert"));
+//        button5.setOnClickListener(createOnClickListener("salad"));
+//        button6.setOnClickListener(createOnClickListener("soup"));
         // Inflate the layout for this fragment
         return RootView;
+
     }
+
+//    private View.OnClickListener createOnClickListener(final String recipeName) {
+//        return new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Bundle bundle = new Bundle();
+//                bundle.putString("food_name", recipeName);
+//                NavController navController = Navigation.findNavController(v);
+//                navController.navigate(R.id.fragment_container, bundle);
+//            }
+//        };
+//    }
+
 
     private void sendToLogin() {
         Intent sendToLogin = new Intent(getActivity(), LoginActivity.class);

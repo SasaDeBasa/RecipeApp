@@ -42,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_image"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/logosplash_tp" />
 
     <TextView
         android:id="@+id/creatAcoounttxt"
@@ -65,10 +65,10 @@
         android:layout_marginBottom="52dp"
         android:background="@drawable/transparent_bg"
         android:ems="10"
-        android:hint="username"
+        android:hint="@string/username"
         android:inputType="text"
-        android:text="User Name"
-        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@+id/registerEmail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         android:layout_marginBottom="52dp"
         android:background="@drawable/transparent_bg"
         android:ems="10"
-        android:hint="email"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/registerPassword"
@@ -97,9 +97,9 @@
         android:layout_marginBottom="44dp"
         android:background="@drawable/transparent_bg"
         android:ems="10"
-        android:hint="password"
+        android:hint="@string/password"
         android:inputType="textPassword"
-        android:text="Password"
+        android:textColorHint="@color/white"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/register"
         app:layout_constraintEnd_toEndOf="parent"
