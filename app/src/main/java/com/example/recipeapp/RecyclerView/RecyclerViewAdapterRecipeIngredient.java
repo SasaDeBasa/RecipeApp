@@ -56,8 +56,8 @@ public class RecyclerViewAdapterRecipeIngredient extends RecyclerView.Adapter<Re
 
         public MyViewHolder(View itemView) {
             super(itemView);
-//            textview_ingredient_name = itemView.findViewById(R.id.recipe_ingredient_name);
-//            ingredientImage_thumbnail = itemView.findViewById(R.id.recipe_ingredient_img);
+            textview_ingredient_name = itemView.findViewById(R.id.recipe_ingredient_name);
+            ingredientImage_thumbnail = itemView.findViewById(R.id.recipe_ingredient_img);
         }
     }
 }
