@@ -14,4 +14,5 @@
     <string name="username">Username</string>
     <string name="more_of_what_you_like">More Of What You like…</string>
     <string name="add_to_bookmarks">Add To Bookmarks</string>
+    <string name="bookmarks_are_empty">Bookmarks are Empty</string>
 </resources>
