@@ -3,4 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="discover">Discover</string>
+    <string name="starter">Starters</string>
+    <string name="desserts">Desserts</string>
+    <string name="appertizers">Appertizers</string>
+    <string name="beverages">Beverages</string>
+    <string name="soup">Soup</string>
+    <string name="salad">Salad</string>
+    <string name="user_username" />
+    <string name="user_emailId" />
 </resources>

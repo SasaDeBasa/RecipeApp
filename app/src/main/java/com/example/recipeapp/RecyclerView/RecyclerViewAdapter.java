@@ -29,6 +29,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.mData = mData;
     }
 
+    //recipe card created
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view;
