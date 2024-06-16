@@ -4,11 +4,13 @@ package com.example.recipeapp.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
@@ -29,6 +31,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.mData = mData;
     }
 
+    //recipe card created
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view;
@@ -40,9 +43,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         holder.tv_recipe_title.setText(mData.get(position).getTitle());
-        holder.tv_ready_in_mins.setText(Integer.toString(mData.get(position).getReadyInMins()));
         if (mData.get(position).getImage().isEmpty()) {
-//            holder.img_recipe_thumbnail.setImageResource(R.drawable.nopicture);
+           holder.img_recipe_thumbnail.setImageResource(R.drawable.nopicture);
         } else {
             Picasso.get().load(mData.get(position).getImage()).into(holder.img_recipe_thumbnail);
         }
@@ -72,13 +74,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public MyViewHolder(View itemView) {
             super(itemView);
-//            tv_recipe_title = (TextView) itemView.findViewById(R.id.foodName_randomRecipe) ;
-//            tv_recipe_title.setSelected(true);
-//            tv_recipe_title.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-//            tv_recipe_title.setSingleLine(true);
-//            img_recipe_thumbnail = (ImageView) itemView.findViewById(R.id.imageView_randomRecipe);
-//            tv_ready_in_mins = (TextView) itemView.findViewById(R.id.timeTaken_RandomRecipe);
-//            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
+          tv_recipe_title = (TextView) itemView.findViewById(R.id.foodName_randomRecipe) ;
+          tv_recipe_title.setSelected(true);
+            tv_recipe_title.setMaxLines(2);
+        tv_recipe_title.setEllipsize(TextUtils.TruncateAt.END);
+           tv_recipe_title.setSingleLine(true);
+          img_recipe_thumbnail = (ImageView) itemView.findViewById(R.id.imageView_randomRecipe);
+//          tv_ready_in_mins = (TextView) itemView.findViewById(R.id.timeTaken_RandomRecipe);
+            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
 }

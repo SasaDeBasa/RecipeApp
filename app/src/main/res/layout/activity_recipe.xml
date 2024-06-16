@@ -1,6 +1,547 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--stat card-->
+            <FrameLayout
+                android:id="@+id/ingredient_frame"
+                android:layout_width="match_parent"
+                android:layout_height="249dp"
+                android:background="@color/light_green"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/recipe_ingredient_img"
+                    android:layout_width="190dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/image_corners"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+
+                <TextView
+                    android:id="@+id/recipe_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#C3232020"
+                    android:fontFamily="@font/uber_bold"
+                    android:gravity="start"
+                    android:padding="20dp"
+                    android:text="TextView"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_stat"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#3E3C3C"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recipe_ready_in_card"
+                        android:layout_width="75sp"
+                        android:layout_height="70sp"
+                        android:layout_marginStart="8sp"
+                        android:layout_marginTop="30sp"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginBottom="30sp"
+                        android:elevation="15dp"
+                        android:orientation="vertical"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/recipe_likes_card"
+                        app:layout_constraintHorizontal_bias="0.428"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="43dp"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textColor="@color/light_green"
+                                app:drawableTopCompat="@drawable/ic_time2"/>
+
+                            <TextView
+                                android:id="@+id/recipe_ready_in"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Minutes"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recipe_likes_card"
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30sp"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginBottom="30sp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/recipe_servings_card"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="41dp"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                app:drawableTopCompat="@drawable/ic_baseline_recommend_24" />
+
+                            <TextView
+                                android:id="@+id/recipe_likes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Likes"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recipe_servings_card"
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30sp"
+                        android:layout_marginEnd="20sp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/recipe_vegetarian_card"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                app:drawableTopCompat="@drawable/ic_baseline_people_green_24" />
+
+                            <TextView
+                                android:id="@+id/recipe_servings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Servings"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/recipe_vegetarian_card"
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30sp"
+                        android:layout_marginEnd="14dp"
+                        android:elevation="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/recipe_vegetarian"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingTop="8dp"
+                            android:text="Vegetarian"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            app:drawableTopCompat="@drawable/ic_baseline_grass_24" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <!--stat card-->
+
+            <!--ingredients card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#3E3C3C"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:fontFamily="@font/uber_medium"
+                        android:gravity="center"
+                        android:text="Ingredients"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recipe_ingredients_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="14sp"
+                        android:textAlignment="viewStart" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--ingredients card-->
+
+            <!--instructions card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="#3E3C3C"
+                app:cardCornerRadius="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:fontFamily="@font/uber_medium"
+                        android:gravity="center"
+                        android:text="Instructions"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/recipe_instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/uber_regular"
+                        android:gravity="start"
+                        android:padding="15sp"
+                        android:text="TextView"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--instructions card-->
+
+            <!--nutrition card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nutrition_stat"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="5sp"
+                android:layout_marginBottom="20sp"
+                app:cardBackgroundColor="#3E3C3C"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="8sp"
+                        android:layout_marginBottom="8sp"
+                        android:fontFamily="@font/uber_medium"
+                        android:gravity="center"
+                        android:text="Nutrition Details"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/recipe_calories"
+                            android:layout_width="75sp"
+                            android:layout_height="70sp"
+                            android:layout_marginStart="8sp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="20sp"
+                            android:layout_marginBottom="30sp"
+                            android:elevation="15dp"
+                            android:orientation="vertical"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/recipe_carbs"
+                            app:layout_constraintHorizontal_bias="0.428"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="43dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:textColor="@color/light_green"
+                                    app:drawableTopCompat="@drawable/ic_calories"/>
+
+                                <TextView
+                                    android:id="@+id/recipe_calories_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Calories"
+                                    android:textColor="@color/black" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/recipe_carbs"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="20sp"
+                            android:layout_marginBottom="30sp"
+                            android:elevation="15dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/recipe_protein"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="41dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:textColor="@color/black"
+                                    app:drawableTopCompat="@drawable/ic_carbs" />
+
+                                <TextView
+                                    android:id="@+id/recipe_carbs_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Carbs"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/recipe_protein"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="20sp"
+                            android:elevation="15dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:padding="8dp"
+                                    android:textColor="@color/black"
+                                    app:drawableTopCompat="@drawable/ic_protein" />
+
+                                <TextView
+                                    android:id="@+id/recipe_protein_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Proteins"
+                                    android:textColor="@color/black" />
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/recipe_fat"
+                            android:layout_width="75dp"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="10sp"
+                            android:layout_marginEnd="14dp"
+                            android:elevation="15dp"
+                            app:cardCornerRadius="10dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:gravity="center"
+                                android:paddingTop="8dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                app:drawableTopCompat="@drawable/ic_fat" />
+
+                            <TextView
+                                android:id="@+id/recipe_fat_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Fats"
+                                android:textColor="@color/black" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--nutrition card-->
+            <Button
+                android:id="@+id/fab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_bookmarks"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:background="@drawable/rounded_button2"
+                android:fontFamily="@font/uber_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
