@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
             sendToLogin();
         }
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

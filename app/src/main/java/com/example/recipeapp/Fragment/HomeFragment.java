@@ -1,6 +1,7 @@
 package com.example.recipeapp.Fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.recipeapp.Activities.LoginActivity;
 import com.example.recipeapp.Activities.ProfileActivity;
+import com.example.recipeapp.Activities.RecipeActivity;
 import com.example.recipeapp.Models.Recipe;
 import com.example.recipeapp.R;
 import com.example.recipeapp.RecyclerView.RecyclerViewAdapter;
@@ -83,6 +85,97 @@ public class HomeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        View fingerButton = RootView.findViewById(R.id.hfingerfood);
+        fingerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "716429");
+                intent.putExtra("title", "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/716429-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
+        View dessertButton = RootView.findViewById(R.id.hdesserts);
+        dessertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "90629");
+                intent.putExtra("title", "Baked Apples in White Wine");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
+        View apperButton = RootView.findViewById(R.id.happertizer);
+        apperButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "209128");
+                intent.putExtra("title", "Grilled Romesco-Style Pork");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
+        View beveragButton = RootView.findViewById(R.id.hbeverage);
+        beveragButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "209128");
+                intent.putExtra("title", "Grilled Romesco-Style Pork");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
+        View saladBtn = RootView.findViewById(R.id.hsalad);
+        saladBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "209128");
+                intent.putExtra("title", "Grilled Romesco-Style Pork");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
+        View soupButton = RootView.findViewById(R.id.hsoup);
+        soupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int position = 0; // or any other logic to get the correct position
+                Recipe selectedRecipe = listRecipe.get(position);
+
+                Intent intent = new Intent(getContext(), RecipeActivity.class);
+                intent.putExtra("id", "209128");
+                intent.putExtra("title", "Grilled Romesco-Style Pork");
+                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                startActivity(intent);
+            }
+        });
+
         progressBar = RootView.findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.VISIBLE);
         emptyView= RootView.findViewById(R.id.empty_view2);
@@ -98,36 +191,10 @@ public class HomeFragment extends Fragment {
         myrv.setLayoutManager(new GridLayoutManager(getActivity(), 1));
         getRandomRecipes();
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
-//        ImageButton button1 = view.findViewById(R.id.hfingerfood);
-//        ImageButton button2 = view.findViewById(R.id.hbeverage);
-//        ImageButton button3 = view.findViewById(R.id.happertizer);
-//        ImageButton button4 = view.findViewById(R.id.hdesserts);
-//        ImageButton button5 = view.findViewById(R.id.hsalad);
-//        ImageButton button6 = view.findViewById(R.id.hsoup);
-//
-//        button1.setOnClickListener(createOnClickListener("fingerfood"));
-//        button2.setOnClickListener(createOnClickListener("beverage"));
-//        button3.setOnClickListener(createOnClickListener("appertizer"));
-//        button4.setOnClickListener(createOnClickListener("dessert"));
-//        button5.setOnClickListener(createOnClickListener("salad"));
-//        button6.setOnClickListener(createOnClickListener("soup"));
         // Inflate the layout for this fragment
         return RootView;
 
     }
-
-//    private View.OnClickListener createOnClickListener(final String recipeName) {
-//        return new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Bundle bundle = new Bundle();
-//                bundle.putString("food_name", recipeName);
-//                NavController navController = Navigation.findNavController(v);
-//                navController.navigate(R.id.fragment_container, bundle);
-//            }
-//        };
-//    }
 
 
     private void sendToLogin() {
@@ -179,4 +246,5 @@ public class HomeFragment extends Fragment {
         );
         requestQueue.add(jsonObjectRequest);
     }
+
 }

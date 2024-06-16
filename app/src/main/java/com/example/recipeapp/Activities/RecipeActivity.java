@@ -50,12 +50,11 @@ public class RecipeActivity extends AppCompatActivity {
     private TextView title, ready_in, servings, vegetarian, instructions, likes, carbs, protein, fats, calories;
     private ImageView img;
     private DatabaseReference mRootRef;
-    private FirebaseAuth mAuth;
     private JSONArray ingredientsArr;
     private List<Ingredient> ingredientsList = new ArrayList<Ingredient>();
     private RecyclerView myrv;
     private boolean like = false;
-    public String api_key = "your_api_key";
+    public String api_key = "11288130bd24478fbca94f418c0082e3";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,10 +64,11 @@ public class RecipeActivity extends AppCompatActivity {
 
         final Intent intent = getIntent();
         final String recipeId = Objects.requireNonNull(intent.getExtras()).getString("id");
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         final String id = mAuth.getCurrentUser().getUid();
+        System.out.println(recipeId);
         mRootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(id).child("Bookmarks").child(recipeId);
-        ImageButton fab = findViewById(R.id.btn_bookmark);
+        Button fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +99,7 @@ public class RecipeActivity extends AppCompatActivity {
             }
         });
         img = findViewById(R.id.recipe_ingredient_img);
-        title = findViewById(R.id.recipe_ingredient_name);
+        title = findViewById(R.id.recipe_name);
         ready_in = findViewById(R.id.recipe_ready_in);
         servings = findViewById(R.id.recipe_servings);
         likes = findViewById(R.id.recipe_likes);
@@ -126,7 +126,7 @@ public class RecipeActivity extends AppCompatActivity {
         });
 
         myrv = findViewById(R.id.recipe_ingredients_rv);
-        myrv.setLayoutManager(new GridLayoutManager(this, 2));
+        myrv.setLayoutManager(new GridLayoutManager(this, 1));
     }
 
 

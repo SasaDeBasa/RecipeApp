@@ -29,6 +29,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!--stat card-->
             <FrameLayout
                 android:id="@+id/ingredient_frame"
                 android:layout_width="match_parent"
@@ -48,9 +49,9 @@
 
 
                 <TextView
-                    android:id="@+id/recipe_ingredient_name"
+                    android:id="@+id/recipe_name"
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:background="#C3232020"
                     android:fontFamily="@font/uber_bold"
@@ -60,19 +61,8 @@
                     android:textColor="@color/white"
                     android:textSize="20sp" />
 
-                <ImageButton
-                    android:id="@+id/btn_bookmark"
-                    android:layout_width="70sp"
-                    android:layout_height="75dp"
-                    android:layout_gravity="end|bottom"
-                    android:background=""
-                    app:srcCompat="@drawable/baseline_bookmark_border_24"
-                    app:tint="@color/white"
-                    tools:ignore="SpeakableTextPresentCheck"/>
-
             </FrameLayout>
 
-            <!--stat card-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_stat"
                 android:layout_width="match_parent"
@@ -118,7 +108,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/recipe_ready_in"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="43dp"
                                 android:gravity="center"
@@ -127,6 +117,7 @@
                                 app:drawableTopCompat="@drawable/ic_time2"/>
 
                             <TextView
+                                android:id="@+id/recipe_ready_in"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -154,7 +145,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/recipe_likes"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="41dp"
                                 android:gravity="center"
@@ -163,6 +154,7 @@
                                 app:drawableTopCompat="@drawable/ic_baseline_recommend_24" />
 
                             <TextView
+                                android:id="@+id/recipe_likes"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -191,7 +183,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/recipe_servings"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:gravity="center"
@@ -200,6 +192,7 @@
                                 app:drawableTopCompat="@drawable/ic_baseline_people_green_24" />
 
                             <TextView
+                                android:id="@+id/recipe_servings"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -320,9 +313,9 @@
                         android:id="@+id/recipe_instructions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/uber_light"
-                        android:gravity="center"
-                        android:padding="14sp"
+                        android:fontFamily="@font/uber_regular"
+                        android:gravity="start"
+                        android:padding="15sp"
                         android:text="TextView"
                         android:textColor="@color/white"
                         android:textSize="18sp" />
@@ -395,7 +388,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/recipe_calories_tv"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="43dp"
                                     android:gravity="center"
@@ -404,6 +397,7 @@
                                     app:drawableTopCompat="@drawable/ic_calories"/>
 
                                 <TextView
+                                    android:id="@+id/recipe_calories_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -431,7 +425,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/recipe_carbs_tv"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="41dp"
                                     android:gravity="center"
@@ -440,6 +434,7 @@
                                     app:drawableTopCompat="@drawable/ic_carbs" />
 
                                 <TextView
+                                    android:id="@+id/recipe_carbs_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -468,7 +463,7 @@
                                 android:orientation="vertical">
 
                                 <TextView
-                                    android:id="@+id/recipe_protein_tv"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
                                     android:gravity="center"
@@ -477,6 +472,7 @@
                                     app:drawableTopCompat="@drawable/ic_protein" />
 
                                 <TextView
+                                    android:id="@+id/recipe_protein_tv"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
@@ -505,7 +501,7 @@
                                 android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/recipe_fat_tv"
+
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:gravity="center"
@@ -515,6 +511,7 @@
                                 app:drawableTopCompat="@drawable/ic_fat" />
 
                             <TextView
+                                android:id="@+id/recipe_fat_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -525,10 +522,23 @@
                         </androidx.cardview.widget.CardView>
 
                     </LinearLayout>
+
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
             <!--nutrition card-->
-
+            <Button
+                android:id="@+id/fab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_bookmarks"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:background="@drawable/rounded_button2"
+                android:fontFamily="@font/uber_bold"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
         </LinearLayout>
 
 
