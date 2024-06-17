@@ -149,14 +149,14 @@ public class RecipeActivity extends AppCompatActivity {
                                // img.setImageResource(R.drawable.nopicture);
                             }
                             title.setText((String) response.get("title"));
-                            ready_in.setText(Integer.toString((Integer) response.get("readyInMinutes")));
-                            servings.setText(Integer.toString((Integer) response.get("servings")));
+                            ready_in.setText(Integer.toString((Integer) response.get("readyInMinutes"))+" Minutes");
+                            servings.setText(Integer.toString((Integer) response.get("servings"))+" Servings");
                             likes.setText(Integer.toString((Integer) response.get("aggregateLikes")));
                             if ((boolean) response.get("vegetarian")) {
                                 vegetarian.setText("Vegetarian");
                             }
                             else{
-                                vegetarian.setText("Non-Vegetarian");
+                                vegetarian.setText("Non-\nVegetarian");
                             }
                             try{
                                 if(response.get("instructions").equals("")){
@@ -211,10 +211,10 @@ public class RecipeActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try{
-                            carbs.setText((String) response.get("carbs"));
-                            calories.setText((String) response.get("calories"));
-                            fats.setText((String) response.get("fat"));
-                            protein.setText((String) response.get("protein"));
+                            carbs.setText(String.format("%s\nCarbs", response.get("carbs")));
+                            calories.setText((String) response.get("calories")+"\nCalories");
+                            fats.setText((String) response.get("fat")+"\nFat");
+                            protein.setText((String) response.get("protein")+"\nProtein");
                         } catch (JSONException exception) {
                             exception.printStackTrace();
                         }

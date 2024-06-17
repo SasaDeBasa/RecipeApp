@@ -16,15 +16,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.NavigationUI;
-
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
+    private BottomNavigationView bottomNavigationView;
 
     @Override
     public void onStart() {
@@ -34,28 +31,19 @@ public class MainActivity extends AppCompatActivity {
             sendToLogin();
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    Objects.requireNonNull(getSupportActionBar()).hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
+
         mAuth = FirebaseAuth.getInstance();
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-//        NavHostFragment navHostFragment =
-//                (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-//        NavController navController = navHostFragment.getNavController();
-//        NavigationUI.setupActionBarWithNavController(this, navController);
     }
-
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = ((NavHostFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.fragment_container)).getNavController();
-//        return navController.navigateUp() || super.onSupportNavigateUp();
-//    }
 
     private void sendToLogin() {
         Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
@@ -67,16 +55,24 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
+
+            // Reset all icons to baseline
+            bottomNavigationView.getMenu().findItem(R.id.nav_home).setIcon(R.drawable.outline_home_24);
+            bottomNavigationView.getMenu().findItem(R.id.nav_favorites).setIcon(R.drawable.baseline_bookmark_border_24);
+            bottomNavigationView.getMenu().findItem(R.id.nav_search).setIcon(R.drawable.round_search_24);
+
             switch (item.getItemId()) {
                 case R.id.nav_home:
                     selectedFragment = new HomeFragment();
+                    item.setIcon(R.drawable.baseline_home_filled_24);
                     break;
-
                 case R.id.nav_favorites:
                     selectedFragment = new FavoritesFragment();
+                    item.setIcon(R.drawable.baseline_bookmark_filled_24);
                     break;
                 case R.id.nav_search:
                     selectedFragment = new SearchFragment();
+                    item.setIcon(R.drawable.outline_search_check_24);
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();

@@ -150,6 +150,7 @@
                                 android:layout_height="41dp"
                                 android:gravity="center"
                                 android:padding="8dp"
+                                android:text="Likes"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_baseline_recommend_24" />
 
@@ -367,7 +368,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/recipe_calories"
                             android:layout_width="75sp"
-                            android:layout_height="70sp"
+                            android:layout_height="80sp"
                             android:layout_marginStart="8sp"
                             android:layout_marginTop="10sp"
                             android:layout_marginEnd="20sp"
@@ -402,6 +403,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Calories"
+                                    android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -409,7 +411,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/recipe_carbs"
                             android:layout_width="75dp"
-                            android:layout_height="70dp"
+                            android:layout_height="80dp"
                             android:layout_marginTop="10sp"
                             android:layout_marginEnd="20sp"
                             android:layout_marginBottom="30sp"
@@ -439,6 +441,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Carbs"
+                                    android:textAlignment="center"
                                     android:textColor="@color/black" />
 
                             </LinearLayout>
@@ -448,7 +451,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/recipe_protein"
                             android:layout_width="75dp"
-                            android:layout_height="70dp"
+                            android:layout_height="80dp"
                             android:layout_marginTop="10sp"
                             android:layout_marginEnd="20sp"
                             android:elevation="15dp"
@@ -463,7 +466,6 @@
                                 android:orientation="vertical">
 
                                 <TextView
-
                                     android:layout_width="match_parent"
                                     android:layout_height="40dp"
                                     android:gravity="center"
@@ -477,6 +479,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Proteins"
+                                    android:textAlignment="center"
                                     android:textColor="@color/black" />
 
                             </LinearLayout>
@@ -486,7 +489,7 @@
                         <androidx.cardview.widget.CardView
                             android:id="@+id/recipe_fat"
                             android:layout_width="75dp"
-                            android:layout_height="70dp"
+                            android:layout_height="80dp"
                             android:layout_marginTop="10sp"
                             android:layout_marginEnd="14dp"
                             android:elevation="15dp"
@@ -516,6 +519,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="Fats"
+                                android:textAlignment="center"
                                 android:textColor="@color/black" />
                             </LinearLayout>
 
