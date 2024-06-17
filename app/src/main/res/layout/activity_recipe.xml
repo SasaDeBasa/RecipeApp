@@ -94,6 +94,7 @@
                         android:layout_marginBottom="30sp"
                         android:elevation="15dp"
                         android:orientation="vertical"
+                        android:background="@color/white"
                         app:cardCornerRadius="10dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/recipe_likes_card"
@@ -104,6 +105,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:background="@color/white"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
@@ -113,6 +115,7 @@
                                 android:layout_height="43dp"
                                 android:gravity="center"
                                 android:padding="8dp"
+                                android:background="@color/white"
                                 android:textColor="@color/light_green"
                                 app:drawableTopCompat="@drawable/ic_time2"/>
 
@@ -121,6 +124,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:background="@color/white"
                                 android:text="Minutes"
                                 android:textColor="@color/black" />
                         </LinearLayout>
@@ -131,6 +135,7 @@
                         android:layout_width="75dp"
                         android:layout_height="70dp"
                         android:layout_marginTop="30sp"
+                        android:background="@color/white"
                         android:layout_marginEnd="20sp"
                         android:layout_marginBottom="30sp"
                         android:elevation="15dp"
@@ -142,6 +147,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
 
                             <TextView
@@ -151,12 +157,14 @@
                                 android:gravity="center"
                                 android:padding="8dp"
                                 android:text="Likes"
+                                android:background="@color/white"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_baseline_recommend_24" />
 
                             <TextView
                                 android:id="@+id/recipe_likes"
                                 android:layout_width="wrap_content"
+                                android:background="@color/white"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="Likes"
@@ -170,6 +178,7 @@
                         android:id="@+id/recipe_servings_card"
                         android:layout_width="75dp"
                         android:layout_height="70dp"
+                        android:background="@color/white"
                         android:layout_marginTop="30sp"
                         android:layout_marginEnd="20sp"
                         android:elevation="15dp"
@@ -181,6 +190,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
 
                             <TextView
@@ -189,6 +199,7 @@
                                 android:layout_height="40dp"
                                 android:gravity="center"
                                 android:padding="8dp"
+                                android:background="@color/white"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_baseline_people_green_24" />
 
@@ -197,6 +208,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:background="@color/white"
                                 android:text="Servings"
                                 android:textColor="@color/black" />
 
@@ -209,6 +221,7 @@
                         android:layout_width="75dp"
                         android:layout_height="70dp"
                         android:layout_marginTop="30sp"
+                        android:background="@color/white"
                         android:layout_marginEnd="14dp"
                         android:elevation="15dp"
                         app:cardCornerRadius="10dp"
@@ -223,6 +236,7 @@
                             android:gravity="center"
                             android:paddingTop="8dp"
                             android:text="Vegetarian"
+                            android:background="@color/white"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             app:drawableTopCompat="@drawable/ic_baseline_grass_24" />
@@ -371,6 +385,7 @@
                             android:layout_height="80sp"
                             android:layout_marginStart="8sp"
                             android:layout_marginTop="10sp"
+                            android:background="@color/white"
                             android:layout_marginEnd="20sp"
                             android:layout_marginBottom="30sp"
                             android:elevation="15dp"
@@ -386,13 +401,15 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:background="@color/white">
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="43dp"
                                     android:gravity="center"
+                                    android:background="@color/white"
                                     android:padding="8dp"
                                     android:textColor="@color/light_green"
                                     app:drawableTopCompat="@drawable/ic_calories"/>
@@ -403,6 +420,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Calories"
+                                    android:background="@color/white"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -410,6 +428,7 @@
 
                         <androidx.cardview.widget.CardView
                             android:id="@+id/recipe_carbs"
+                            android:background="@color/white"
                             android:layout_width="75dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="10sp"
@@ -424,6 +443,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -431,6 +451,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="41dp"
                                     android:gravity="center"
+                                    android:background="@color/white"
                                     android:padding="8dp"
                                     android:textColor="@color/black"
                                     app:drawableTopCompat="@drawable/ic_carbs" />
@@ -442,7 +463,8 @@
                                     android:layout_gravity="center"
                                     android:text="Carbs"
                                     android:textAlignment="center"
-                                    android:textColor="@color/black" />
+                                    android:textColor="@color/black"
+                                    android:background="@color/white"/>
 
                             </LinearLayout>
 
@@ -453,6 +475,7 @@
                             android:layout_width="75dp"
                             android:layout_height="80dp"
                             android:layout_marginTop="10sp"
+                            android:background="@color/white"
                             android:layout_marginEnd="20sp"
                             android:elevation="15dp"
                             app:cardCornerRadius="10dp"
@@ -463,6 +486,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -470,6 +494,7 @@
                                     android:layout_height="40dp"
                                     android:gravity="center"
                                     android:padding="8dp"
+                                    android:background="@color/white"
                                     android:textColor="@color/black"
                                     app:drawableTopCompat="@drawable/ic_protein" />
 
@@ -479,6 +504,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Proteins"
+                                    android:background="@color/white"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
 
@@ -494,6 +520,7 @@
                             android:layout_marginEnd="14dp"
                             android:elevation="15dp"
                             app:cardCornerRadius="10dp"
+                            android:background="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
@@ -501,6 +528,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                             <TextView
@@ -509,6 +537,7 @@
                                 android:layout_height="40dp"
                                 android:gravity="center"
                                 android:paddingTop="8dp"
+                                android:background="@color/white"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_fat" />
@@ -517,6 +546,7 @@
                                 android:id="@+id/recipe_fat_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/white"
                                 android:layout_gravity="center"
                                 android:text="Fats"
                                 android:textAlignment="center"
