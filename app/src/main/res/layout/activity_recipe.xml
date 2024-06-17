@@ -105,6 +105,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:background="@color/white"
                             android:layout_height="match_parent"
                             android:orientation="vertical">
 
@@ -114,6 +115,7 @@
                                 android:layout_height="43dp"
                                 android:gravity="center"
                                 android:padding="8dp"
+                                android:background="@color/white"
                                 android:textColor="@color/light_green"
                                 app:drawableTopCompat="@drawable/ic_time2"/>
 
@@ -122,6 +124,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:background="@color/white"
                                 android:text="Minutes"
                                 android:textColor="@color/black" />
                         </LinearLayout>
@@ -144,6 +147,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
 
                             <TextView
@@ -153,12 +157,14 @@
                                 android:gravity="center"
                                 android:padding="8dp"
                                 android:text="Likes"
+                                android:background="@color/white"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_baseline_recommend_24" />
 
                             <TextView
                                 android:id="@+id/recipe_likes"
                                 android:layout_width="wrap_content"
+                                android:background="@color/white"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="Likes"
@@ -184,6 +190,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="@color/white"
                             android:orientation="vertical">
 
                             <TextView
@@ -192,6 +199,7 @@
                                 android:layout_height="40dp"
                                 android:gravity="center"
                                 android:padding="8dp"
+                                android:background="@color/white"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_baseline_people_green_24" />
 
@@ -200,6 +208,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
+                                android:background="@color/white"
                                 android:text="Servings"
                                 android:textColor="@color/black" />
 
@@ -227,6 +236,7 @@
                             android:gravity="center"
                             android:paddingTop="8dp"
                             android:text="Vegetarian"
+                            android:background="@color/white"
                             android:textAlignment="center"
                             android:textColor="@color/black"
                             app:drawableTopCompat="@drawable/ic_baseline_grass_24" />
@@ -391,13 +401,15 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:background="@color/white">
 
                                 <TextView
 
                                     android:layout_width="match_parent"
                                     android:layout_height="43dp"
                                     android:gravity="center"
+                                    android:background="@color/white"
                                     android:padding="8dp"
                                     android:textColor="@color/light_green"
                                     app:drawableTopCompat="@drawable/ic_calories"/>
@@ -408,6 +420,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Calories"
+                                    android:background="@color/white"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -430,6 +443,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -437,6 +451,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="41dp"
                                     android:gravity="center"
+                                    android:background="@color/white"
                                     android:padding="8dp"
                                     android:textColor="@color/black"
                                     app:drawableTopCompat="@drawable/ic_carbs" />
@@ -448,7 +463,8 @@
                                     android:layout_gravity="center"
                                     android:text="Carbs"
                                     android:textAlignment="center"
-                                    android:textColor="@color/black" />
+                                    android:textColor="@color/black"
+                                    android:background="@color/white"/>
 
                             </LinearLayout>
 
@@ -470,6 +486,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                                 <TextView
@@ -477,6 +494,7 @@
                                     android:layout_height="40dp"
                                     android:gravity="center"
                                     android:padding="8dp"
+                                    android:background="@color/white"
                                     android:textColor="@color/black"
                                     app:drawableTopCompat="@drawable/ic_protein" />
 
@@ -486,6 +504,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Proteins"
+                                    android:background="@color/white"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
 
@@ -509,6 +528,7 @@
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@color/white"
                                 android:orientation="vertical">
 
                             <TextView
@@ -517,6 +537,7 @@
                                 android:layout_height="40dp"
                                 android:gravity="center"
                                 android:paddingTop="8dp"
+                                android:background="@color/white"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
                                 app:drawableTopCompat="@drawable/ic_fat" />
@@ -525,6 +546,7 @@
                                 android:id="@+id/recipe_fat_tv"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:background="@color/white"
                                 android:layout_gravity="center"
                                 android:text="Fats"
                                 android:textAlignment="center"
