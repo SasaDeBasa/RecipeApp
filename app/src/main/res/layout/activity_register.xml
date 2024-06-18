@@ -46,16 +46,17 @@
 
     <TextView
         android:id="@+id/creatAcoounttxt"
-        android:layout_width="257dp"
-        android:layout_height="36dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
         android:layout_marginBottom="36dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/uber_bold"
-        android:text="Creat an account"
+        android:text="Create an account"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/registeruserName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.285"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -70,6 +71,7 @@
         android:textColorHint="#FFFFFF"
         android:textColor="@color/white"
         android:textSize="15sp"
+        android:fontFamily="@font/uber_regular"
         app:layout_constraintBottom_toTopOf="@+id/registerEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.396"
