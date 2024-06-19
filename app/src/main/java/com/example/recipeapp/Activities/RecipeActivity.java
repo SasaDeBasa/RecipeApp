@@ -69,7 +69,7 @@ public class RecipeActivity extends AppCompatActivity {
         System.out.println(recipeId);
         mRootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(id).child("Bookmarks").child(recipeId);
         Button fab = findViewById(R.id.fab);
-        if(!like){
+        if(like==true){
             fab.setText("REMOVE FROM BOOKMARKS");
         }
         fab.setOnClickListener(new View.OnClickListener() {
