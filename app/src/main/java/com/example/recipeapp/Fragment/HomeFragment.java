@@ -94,9 +94,9 @@ public class HomeFragment extends Fragment {
                 Recipe selectedRecipe = listRecipe.get(position);
 
                 Intent intent = new Intent(getContext(), RecipeActivity.class);
-                intent.putExtra("id", "716429");
-                intent.putExtra("title", "Pasta with Garlic, Scallions, Cauliflower & Breadcrumbs");
-                intent.putExtra("img", "https://img.spoonacular.com/recipes/716429-312x231.jpg");
+                intent.putExtra("id", "655400");
+                intent.putExtra("title", "Pear and Pesto Crostini");
+                intent.putExtra("img", "https://spoonacular.com/recipeImages/Pear-and-Pesto-Crostini-655400.jpg");
                 startActivity(intent);
             }
         });
@@ -124,9 +124,9 @@ public class HomeFragment extends Fragment {
                 Recipe selectedRecipe = listRecipe.get(position);
 
                 Intent intent = new Intent(getContext(), RecipeActivity.class);
-                intent.putExtra("id", "209128");
-                intent.putExtra("title", "Grilled Romesco-Style Pork");
-                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                intent.putExtra("id", "649944");
+                intent.putExtra("title", "Lentil Mango Salad");
+                intent.putExtra("img", "https://spoonacular.com/recipeImages/Lentill-Mango-Salad-649944.jpg");
                 startActivity(intent);
             }
         });
@@ -139,9 +139,9 @@ public class HomeFragment extends Fragment {
                 Recipe selectedRecipe = listRecipe.get(position);
 
                 Intent intent = new Intent(getContext(), RecipeActivity.class);
-                intent.putExtra("id", "209128");
-                intent.putExtra("title", "Grilled Romesco-Style Pork");
-                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                intent.putExtra("id", "644044");
+                intent.putExtra("title", "Protein Strawberry Smoothie");
+                intent.putExtra("img", "https://spoonacular.com/recipeImages/Fruity-Milk-Spin-644044.jpg");
                 startActivity(intent);
             }
         });
@@ -154,9 +154,9 @@ public class HomeFragment extends Fragment {
                 Recipe selectedRecipe = listRecipe.get(position);
 
                 Intent intent = new Intent(getContext(), RecipeActivity.class);
-                intent.putExtra("id", "209128");
-                intent.putExtra("title", "Grilled Romesco-Style Pork");
-                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                intent.putExtra("id", "632269");
+                intent.putExtra("title", "Amaranth and Roast Veggie Salad");
+                intent.putExtra("img", "https://spoonacular.com/recipeImages/Amaranth-and-Roast-Veggie-Salad-632269.jpg");
                 startActivity(intent);
             }
         });
@@ -169,9 +169,9 @@ public class HomeFragment extends Fragment {
                 Recipe selectedRecipe = listRecipe.get(position);
 
                 Intent intent = new Intent(getContext(), RecipeActivity.class);
-                intent.putExtra("id", "209128");
-                intent.putExtra("title", "Grilled Romesco-Style Pork");
-                intent.putExtra("img", "https://img.spoonacular.com/recipes/90629-312x231.jpg");
+                intent.putExtra("id", "716381");
+                intent.putExtra("title", "Nigerian Snail Stew");
+                intent.putExtra("img", "https://spoonacular.com/recipeImages/nigerian-snail-stew-716381.jpg");
                 startActivity(intent);
             }
         });

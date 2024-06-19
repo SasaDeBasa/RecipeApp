@@ -73,7 +73,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             }
         }
         else if(v == login){
-            Intent startIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+            Intent startIntent = new Intent(RegisterActivity.this, MainActivity.class);
             startActivity(startIntent);
         }
     }
@@ -88,9 +88,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             String id = task.getResult().getUser().getUid();
                             database.getReference().child("Users").child(id).setValue(user);
 
-                            Intent mainIntent= new Intent(RegisterActivity.this, LoginActivity.class);
+                            Intent mainIntent= new Intent(RegisterActivity.this, MainActivity.class);
                             Toast.makeText
-                                            (RegisterActivity.this, "Login to confirm your registration", Toast.LENGTH_LONG)
+                                            (RegisterActivity.this, "Successfully Registered", Toast.LENGTH_LONG)
                                     .show();
                             mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(mainIntent);

@@ -69,6 +69,9 @@ public class RecipeActivity extends AppCompatActivity {
         System.out.println(recipeId);
         mRootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(id).child("Bookmarks").child(recipeId);
         Button fab = findViewById(R.id.fab);
+        if(!like){
+            fab.setText("REMOVE FROM BOOKMARKS");
+        }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,9 +85,12 @@ public class RecipeActivity extends AppCompatActivity {
                             favorites.put("title", intent.getExtras().getString("title"));
                             mRootRef.setValue(favorites);
                             Toast.makeText(RecipeActivity.this, "The recipe has been Bookmarked.", Toast.LENGTH_SHORT).show();
+                            fab.setText("REMOVE FROM BOOKMARKS");
                         } else {
                             try {
                                 mRootRef.setValue(null);
+                                fab.setText("ADD TO BOOKMARKS");
+                                Toast.makeText(RecipeActivity.this, "The recipe has been Removed.", Toast.LENGTH_SHORT).show();
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -146,7 +152,7 @@ public class RecipeActivity extends AppCompatActivity {
                                 Picasso.get().load((String) response.get("image")).into(img);
                             }
                             catch (Exception e){
-                               // img.setImageResource(R.drawable.nopicture);
+                                img.setImageResource(R.drawable.nopicture);
                             }
                             title.setText((String) response.get("title"));
                             ready_in.setText(Integer.toString((Integer) response.get("readyInMinutes"))+" Minutes");

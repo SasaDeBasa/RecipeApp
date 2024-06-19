@@ -80,7 +80,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         tv_recipe_title.setEllipsize(TextUtils.TruncateAt.END);
            tv_recipe_title.setSingleLine(true);
           img_recipe_thumbnail = (ImageView) itemView.findViewById(R.id.imageView_randomRecipe);
-//          tv_ready_in_mins = (TextView) itemView.findViewById(R.id.timeTaken_RandomRecipe);
             cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
