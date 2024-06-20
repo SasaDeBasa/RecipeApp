@@ -54,7 +54,7 @@ public class RecyclerViewAdapterFavorites extends RecyclerView.Adapter<RecyclerV
                 intent.putExtra("id",mData.get(position).getId());
                 intent.putExtra("title",mData.get(position).getTitle());
                 intent.putExtra("img",mData.get(position).getImage());
-                intent.putExtra("like",mData.get(position).like);
+                intent.putExtra("like", Recipe.like);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 mContext.startActivity(intent);
             }
