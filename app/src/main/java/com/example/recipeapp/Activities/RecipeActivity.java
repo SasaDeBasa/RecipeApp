@@ -125,6 +125,7 @@ public class RecipeActivity extends AppCompatActivity {
                 Log.i("mRootRef", String.valueOf(dataSnapshot));
                 if (dataSnapshot.getValue() != null) {
                     like = true;
+                    Recipe.like=true;
                 }
             }
             @Override
