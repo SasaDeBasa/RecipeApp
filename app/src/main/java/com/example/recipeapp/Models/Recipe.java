@@ -9,6 +9,7 @@ public class Recipe {
     private String Image;
     private int amountOfDishes;
     private int readyInMins;
+    public static boolean like=false;
 
     public Recipe(String id, String title, String image, int amountOfDishes, int readyInMins) {
         this.id = id;

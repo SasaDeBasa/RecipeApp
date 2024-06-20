@@ -25,6 +25,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.recipeapp.Models.Ingredient;
+import com.example.recipeapp.Models.Recipe;
 import com.example.recipeapp.R;
 import com.example.recipeapp.RecyclerView.RecyclerViewAdapterRecipeIngredient;
 import com.google.firebase.auth.FirebaseAuth;
@@ -53,7 +54,7 @@ public class RecipeActivity extends AppCompatActivity {
     private JSONArray ingredientsArr;
     private List<Ingredient> ingredientsList = new ArrayList<Ingredient>();
     private RecyclerView myrv;
-    private boolean like = false;
+    public boolean like = false;
     public String api_key = "11288130bd24478fbca94f418c0082e3";
 
     @Override
@@ -69,13 +70,14 @@ public class RecipeActivity extends AppCompatActivity {
         System.out.println(recipeId);
         mRootRef = FirebaseDatabase.getInstance().getReference().child("Users").child(id).child("Bookmarks").child(recipeId);
         Button fab = findViewById(R.id.fab);
-        if(like==true){
+        if(Recipe.like==true){
             fab.setText("REMOVE FROM BOOKMARKS");
         }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 like = !like;
+                Recipe.like=true;
                 mRootRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
